@@ -1,0 +1,101 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+/* Navbar */
+header {
+  background: #004080;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header h1 { font-size: 22px; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin: 0 15px; }
+nav ul li a {
+  color: white; text-decoration: none; font-weight: bold;
+  transition: color 0.3s;
+}
+nav ul li a:hover { color: #ffd700; }
+
+/* Hero Section */
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?college,students') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+}
+.hero h2 { font-size: 40px; margin-bottom: 10px; }
+.hero p { font-size: 20px; }
+
+/* Section */
+section { padding: 60px 20px; text-align: center; }
+section h2 { font-size: 28px; margin-bottom: 20px; color: #004080; }
+section p { max-width: 800px; margin: auto; }
+
+/* Courses */
+.courses { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.course {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.course:hover { transform: translateY(-5px); }
+
+/* Faculty */
+.faculty { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.faculty-member {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+.faculty-member img {
+  width: 100px; height: 100px; border-radius: 50%;
+  object-fit: cover; margin-bottom: 10px;
+}
+
+/* Contact */
+form {
+  max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px;
+}
+input, textarea {
+  padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 100%;
+}
+button {
+  padding: 12px;
+  background: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover { background: #003060; }
+
+/* Footer */
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Navbar */
+.menu-toggle { display: none; font-size: 24px; cursor: pointer; }
+@media (max-width: 768px) {
+  nav ul { flex-direction: column; display: none; }
+  nav ul.active { display: flex; }
+  .menu-toggle { display: block; }
+}
